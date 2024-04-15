@@ -1,10 +1,13 @@
 import SvgColor from 'src/components/svg-color';
 
+import Iconify from '../../components/iconify';
+
 // ----------------------------------------------------------------------
 
 const icon = (name) => (
   <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ width: 1, height: 1 }} />
 );
+const IconifyIcon = (name) => <Iconify icon={name} width={25} />;
 
 const navConfig = [
   {
@@ -13,29 +16,19 @@ const navConfig = [
     icon: icon('ic_analytics'),
   },
   {
-    title: 'user',
-    path: '/user',
-    icon: icon('ic_user'),
+    title: 'Projects',
+    path: '/files',
+    icon: IconifyIcon('file-icons:microsoft-project'),
   },
   {
-    title: 'product',
-    path: '/products',
-    icon: icon('ic_cart'),
+    title: 'Jira Projects',
+    path: '/jira-projects',
+    icon: IconifyIcon('mdi:jira'),
   },
   {
-    title: 'blog',
-    path: '/blog',
-    icon: icon('ic_blog'),
-  },
-  {
-    title: 'login',
-    path: '/login',
-    icon: icon('ic_lock'),
-  },
-  {
-    title: 'Not found',
-    path: '/404',
-    icon: icon('ic_disabled'),
+    title: 'Resources',
+    path: '/resources',
+    icon: IconifyIcon('la:users'),
   },
 ];
 
